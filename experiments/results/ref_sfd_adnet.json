@@ -1,0 +1,59 @@
+{
+  "source": "SFD-ADNet: Spatial-Frequency Dual-Domain Adaptive Deformation for Point Cloud Data Augmentation",
+  "venue": "J. Imaging 2026, 12(2), 58 (MDPI)",
+  "authors": "Jiacheng Bao, Lingjun Kong, Wenju Wang",
+  "code": "https://github.com/movablebag/SFD-ADNet",
+  "protocol": "Ren et al. 2022 mCE (7 corruptions x 5 severities, DGCNN-normalized)",
+  "notes": [
+    "Training-time augmentation only; zero inference overhead.",
+    "Built on OpenPoints pipeline; not pluggable into the voxel/HCO stack (verified earlier).",
+    "On ModelNet40-C / PointNet++ backbone their own table has Wolfmix (64.1) and AdaptPoint (63.7) better than SFD-ADNet (84.5); SOTA claim rests on PointNeXt (67.2) and ScanObjectNN-C (75.6).",
+    "Training cost: 3.8 -> 7.2 min/epoch (+89%), peak 9.6 -> 10.8 GB on RTX 3070."
+  ],
+  "modelnet40c_mce": {
+    "backbone": "PointNet++",
+    "rows": {
+      "baseline": 107.2,
+      "pointwolf": 82.5,
+      "rsmix": 86.3,
+      "wolfmix": 64.1,
+      "adaptpoint": 63.7,
+      "sfd_adnet": 84.5
+    }
+  },
+  "modelnet40c_mce_pointnext": {
+    "backbone": "PointNeXt",
+    "rows": {
+      "baseline": 85.6,
+      "pointwolf": 79.5,
+      "rsmix": 87.9,
+      "wolfmix": 74.0,
+      "adaptpoint": 71.1,
+      "sfd_adnet": 67.2
+    }
+  },
+  "scanobjectnnc": {
+    "backbone": "DGCNN",
+    "rows": {
+      "baseline": {"OA": 85.8, "mCE": 100.0},
+      "pointwolf": {"OA": 85.6, "mCE": 99.6},
+      "rsmix": {"OA": 86.5, "mCE": 96.9},
+      "wolfmix": {"OA": 87.2, "mCE": 92.3},
+      "adaptpoint": {"OA": 84.4, "mCE": 90.2},
+      "sfd_adnet": {"OA": 90.8, "mCE": 75.6}
+    }
+  },
+  "training_cost": {
+    "backbone": "PointNeXt",
+    "gpu": "RTX 3070 12GB",
+    "adaptpoint": {"min_per_epoch": 3.8, "peak_gb": 9.6},
+    "sfd_adnet": {"min_per_epoch": 7.2, "peak_gb": 10.8}
+  },
+  "attack_defense_oa": {
+    "note": "Table 5, lower-is-error convention unclear; kept raw",
+    "sfd_adnet": {"perturb": 88.49, "add_cd": 81.76, "add_hd": 77.52, "knn": 87.16, "drop100": 85.92, "drop200": 80.61},
+    "adaptpoint": {"perturb": 86.75, "add_cd": 80.83, "add_hd": 77.03, "knn": 77.67, "drop100": 86.55, "drop200": 83.59}
+  },
+  "extracted": "2026-09-20",
+  "extracted_by": "pdftotext of https://pdfs.semanticscholar.org/166e/edb08171bdb08f229604ad53c7c0a977c6d4.pdf"
+}

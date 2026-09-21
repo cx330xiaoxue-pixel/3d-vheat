@@ -1,0 +1,168 @@
+{
+  "axes": {
+    "coarse_quantize": {
+      "16": {
+        "acc_mean": 0.6433333333333333,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.6433333333333333
+        ]
+      },
+      "24": {
+        "acc_mean": 0.8766666666666667,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.8766666666666667
+        ]
+      },
+      "32": {
+        "acc_mean": 0.87,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.87
+        ]
+      }
+    },
+    "dropout": {
+      "0.25": {
+        "acc_mean": 0.8833333333333333,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.8833333333333333
+        ]
+      },
+      "0.5": {
+        "acc_mean": 0.86,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.86
+        ]
+      },
+      "0.75": {
+        "acc_mean": 0.8066666666666666,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.8066666666666666
+        ]
+      },
+      "0.875": {
+        "acc_mean": 0.5466666666666666,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.5466666666666666
+        ]
+      }
+    },
+    "fps": {
+      "128": {
+        "acc_mean": 0.7833333333333333,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.7833333333333333
+        ]
+      },
+      "256": {
+        "acc_mean": 0.87,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.87
+        ]
+      },
+      "512": {
+        "acc_mean": 0.88,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.88
+        ]
+      },
+      "768": {
+        "acc_mean": 0.88,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.88
+        ]
+      }
+    },
+    "gaussian_noise": {
+      "0.005": {
+        "acc_mean": 0.8766666666666667,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.8766666666666667
+        ]
+      },
+      "0.01": {
+        "acc_mean": 0.8966666666666666,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.8966666666666666
+        ]
+      },
+      "0.02": {
+        "acc_mean": 0.91,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.91
+        ]
+      },
+      "0.03": {
+        "acc_mean": 0.8633333333333333,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.8633333333333333
+        ]
+      },
+      "0.05": {
+        "acc_mean": 0.7,
+        "acc_std": 0.0,
+        "ci95": 0.0,
+        "per_seed": [
+          0.7
+        ]
+      }
+    }
+  },
+  "clean": {
+    "acc": 0.8766666666666667,
+    "n": 300
+  },
+  "meta": {
+    "anisotropic": false,
+    "axes": [
+      "gaussian_noise",
+      "dropout",
+      "coarse_quantize",
+      "fps"
+    ],
+    "backbone": "tiny",
+    "ckpt": "/tmp/heatab_ideal.pth",
+    "dct_augment": false,
+    "device": "cuda",
+    "diffusion": "ideal",
+    "diffusion_steps": 1,
+    "grid": 16,
+    "n_samples": 300,
+    "seeds": [
+      0
+    ],
+    "sigma": 0.1,
+    "static_alpha": false,
+    "timestamp": "2026-09-17 18:55:23",
+    "voxel_mode": "gaussian"
+  }
+}

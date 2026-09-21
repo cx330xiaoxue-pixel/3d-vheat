@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "backbone": "small",
+    "dct_augment": false,
+    "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+    "grid": 16,
+    "sigma": 0.2,
+    "timestamp": "2026-09-19 07:47:18",
+    "voxel_mode": "gaussian"
+  },
+  "params": 14716672,
+  "per_batch": [
+    {
+      "batch_size": 1,
+      "latency_ms": {
+        "mean_ms": 6.5185706615448,
+        "median_ms": 6.015616178512573,
+        "n_iters": 30,
+        "p95_ms": 8.522854447364804
+      },
+      "peak_mem_mb": 200.43896484375,
+      "per_sample_ms": {
+        "mean_ms": 6.5185706615448,
+        "median_ms": 6.015616178512573,
+        "n_iters": 30,
+        "p95_ms": 8.522854447364804
+      },
+      "throughput_samples_per_s": 166.23401000415237
+    },
+    {
+      "batch_size": 16,
+      "latency_ms": {
+        "mean_ms": 20.159451707204184,
+        "median_ms": 20.519424438476562,
+        "n_iters": 30,
+        "p95_ms": 25.29218521118164
+      },
+      "peak_mem_mb": 304.84912109375,
+      "per_sample_ms": {
+        "mean_ms": 1.2599657317002615,
+        "median_ms": 1.2824640274047852,
+        "n_iters": 30,
+        "p95_ms": 1.5807615756988525
+      },
+      "throughput_samples_per_s": 779.7489665449846
+    },
+    {
+      "batch_size": 64,
+      "latency_ms": {
+        "mean_ms": 65.02451070149739,
+        "median_ms": 58.850624084472656,
+        "n_iters": 30,
+        "p95_ms": 109.3099494934082
+      },
+      "peak_mem_mb": 770.16162109375,
+      "per_sample_ms": {
+        "mean_ms": 1.0160079797108967,
+        "median_ms": 0.9195410013198853,
+        "n_iters": 30,
+        "p95_ms": 1.707967960834503
+      },
+      "throughput_samples_per_s": 1087.4990876585448
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Epoch   0 | train_loss=3.0310 train_acc=45.75% test_acc=48.06% lr=5.00e-04 time=138s
+Epoch   1 | train_loss=2.0160 train_acc=71.21% test_acc=57.85% lr=0.00e+00 time=276s
+
+===== gaussian (sigma=0.05) =====
+Best: 57.85% at epoch 1
+Params: 17,153,792
+Time: 276s
