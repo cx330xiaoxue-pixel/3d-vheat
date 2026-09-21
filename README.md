@@ -4,6 +4,12 @@
 
 3D-vHeat is a 3D extension of **vHeat: Building Vision Models upon Heat Conduction** (CVPR 2025, [code](https://github.com/MzeroMiko/vHeat)). Self-attention is replaced by a **Heat Conduction Operator (HCO)** implemented with 3D DCT/IDCT over sparse voxels, and the resulting frequency-domain design space is studied for corruption robustness.
 
+<p align="center">
+  <img src="docs/figures/fig1_final_authentic.png" width="520" alt="3D-vHeat method overview — frequency-domain design space">
+</p>
+
+*Method overview: a chair point cloud is voxelized into a Gaussian field and flows through four heat-conduction stages; the spectral control axis marks the four lifecycle knobs (σ, DCTAugment, τ·k + IAK, test-time filtering) with their inference costs. Authentic data renders behind the schematic (point cloud, voxel field, stage activations, DCT spectrum, softmax) are collected in [docs/figures/fig1_appendix_authentic.png](docs/figures/fig1_appendix_authentic.png).*
+
 > **Status — research code, paper in progress.**
 > All experiments in this repository use a **33-class subset of ModelNet40** (7,589 train / 1,860 test, 1,024 points per shape), unless stated otherwise. Full ModelNet40 experiments (9,843 / 2,468 / 40 classes) are in progress.
 > Accuracy depends strongly on the evaluation batch size (per-batch voxelization bounds) — see [Protocol note](#protocol-note).
@@ -135,6 +141,24 @@ tests/                    test suite
 docs/logs/                local training logs
 docs/autodl_logs/         AutoDL (large-batch) training logs
 ```
+
+## Figures
+
+Method overview (frequency-domain design space, spectral control axis with the four lifecycle knobs):
+
+<p align="center">
+  <img src="docs/figures/fig1_final_authentic.png" width="520" alt="3D-vHeat overview">
+</p>
+
+Authentic data renders behind the schematic — real point cloud, voxel field, per-stage activations from the released checkpoint, DCT spectrum, corruption variants, and the checkpoint softmax:
+
+<p align="center">
+  <img src="docs/figures/fig1_appendix_authentic.png" width="520" alt="Authentic data renders">
+</p>
+
+The generation prompt and layering provenance for the overview artwork: [docs/figures/fig1_imagegen_prompt_v3.txt](docs/figures/fig1_imagegen_prompt_v3.txt).
+
+---
 
 ## Direction
 
